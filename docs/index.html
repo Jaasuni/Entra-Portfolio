@@ -1,7 +1,64 @@
-﻿<!doctype html><meta charset='utf-8'><title>Entra Portfolio</title>
-<h1>Entra ID Security Baseline – Portfolio</h1>
-<p>See README for details.</p>
-<ul>
-  <li><a href="../README.md">README</a></li>
-  <li><a href="../evidence/">Evidence</a></li>
-</ul>
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Entra ID Security Baseline – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Entra ID Security Baseline – Portfolio" />
+  <meta property="og:description" content="Admin MFA • Legacy block • PIM JIT • Guest lifecycle • Access reviews — with evidence and runbooks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jaasuni.github.io/Entra-Portfolio/" />
+  <meta property="og:image" content="https://jaasuni.github.io/Entra-Portfolio/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Entra ID Security Baseline – Portfolio" />
+  <meta name="twitter:description" content="Admin MFA • Legacy block • PIM JIT • Guest lifecycle • Access reviews — with evidence and runbooks." />
+  <meta name="twitter:image" content="https://jaasuni.github.io/Entra-Portfolio/og-card.png" />
+
+  <link rel="canonical" href="https://jaasuni.github.io/Entra-Portfolio/" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{color-scheme:light dark}
+    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:920px;margin:2rem auto;padding:0 1rem;background:Canvas;color:CanvasText}
+    .btn{display:inline-block;padding:.6rem 1rem;border:1px solid #e5e7eb;border-radius:10px;text-decoration:none}
+    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{border:1px solid rgba(127,127,127,.25);border-radius:12px;padding:1rem}
+  </style>
+</head>
+<body>
+  <h1>Entra ID Security Baseline – Portfolio</h1>
+  <p>See README for details.</p>
+  <p>
+    <a class="btn" href="../README.md">README</a>
+    <a class="btn" href="../evidence/">Evidence</a>
+  </p>
+
+  <h2>Results</h2>
+  <ul>
+    <li>Admins always MFA; legacy auth blocked (report-only pilot)</li>
+    <li>PIM JIT: MFA + approval + justification (2h)</li>
+    <li>Guest access via Access Package (30-day expiry)</li>
+    <li>Quarterly Access Reviews (auto-apply)</li>
+  </ul>
+
+  <h2>Evidence (files)</h2>
+  <div class="grid">
+    <div class="card"><strong>CA – Admin MFA</strong><br><code>evidence/ca_admin_mfa_policy.png</code></div>
+    <div class="card"><strong>CA – Legacy Block</strong><br><code>evidence/ca_legacy_block.png</code></div>
+    <div class="card"><strong>Report-only</strong><br><code>evidence/sign-in-logs_report-only_sample.csv</code></div>
+    <div class="card"><strong>PIM Settings</strong><br><code>evidence/pim_role_settings_UserAdministrator.png</code></div>
+    <div class="card"><strong>PIM Audit</strong><br><code>evidence/pim_audit_last90days.csv</code></div>
+  </div>
+
+  <h2>Redaction & Metrics</h2>
+  <ul>
+    <li>Blur tenant IDs/UPNs/IPs; keep dates and policy names visible.</li>
+    <li>Track: legacy-auth blocks %, PIM activations approved, guests auto-expired, review completion rate.</li>
+  </ul>
+</body>
+</html>
